@@ -1,4 +1,5 @@
 package com.elda.primeravez.entity;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.Id;
@@ -12,8 +13,11 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 public class PersonasEntity {
     @Id
     private Long id;
+    @Column
     private String nombre;
+    @Column
     private String apellido;
+    
     protected PersonasEntity() {}
     public PersonasEntity(Long id,String nombre, String apellido) {
      this.id=id;
